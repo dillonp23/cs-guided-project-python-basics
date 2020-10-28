@@ -15,6 +15,27 @@ Examples:
 - XO("zpzpzpp") ➞ True (Returns True if no x and o)
 - XO("zzoo") ➞ False
 """
-def XO(txt):
-    # Your code here
+def XO(txt:str) -> bool:
+    # oCounter = 0
+    # xCounter = 0
 
+    txt = txt.lower()
+
+    return txt.count("x") == txt.count("o")
+
+    # for char in txt:
+    #     if char == "x":
+    #         xCounter += 1
+    #     elif char == "o":
+    #         oCounter += 1
+
+    # if oCounter == 0 and xCounter == 0 or oCounter == xCounter:
+    #     return True
+    # else:
+    #     return False
+
+print(XO("ooxx"))
+print(XO("xooxx"))
+print(XO("ooxXm"))
+print(XO("zpzpzpp"))
+print(XO("zzoo"))
